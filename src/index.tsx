@@ -11,10 +11,11 @@ createServer({
       return [
         {
           id: 1,
-          title: "trnasaction 1",
+          title: "Transaction 1",
           amount: 1300,
           type: "deposit",
           category: "eletronics",
+          createAt: Date.now(),
         },
       ];
     });
