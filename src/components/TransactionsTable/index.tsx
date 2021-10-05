@@ -22,7 +22,10 @@ export function TransactionsTable() {
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
               <td className={transaction.type}>
-                {new Intl.NumberFormat().format(transaction.amount)}
+                {new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(transaction.amount)}
               </td>
               <td>{transaction.category}</td>
               <td>
